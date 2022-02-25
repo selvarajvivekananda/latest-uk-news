@@ -1,0 +1,27 @@
+{
+  "name": "latest-uk-news",
+  "version": "1.0.0",
+  "description": "Latest United Kingdom News",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/selvarajvivekananda/latest-uk-news.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/selvarajvivekananda/latest-uk-news/issues"
+  },
+  "homepage": "https://github.com/selvarajvivekananda/latest-uk-news#readme",
+  "dependencies": {
+    "axios": "^0.26.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3",
+    "redis": "^3.1.2"
+  }
+}
