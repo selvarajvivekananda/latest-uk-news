@@ -11,14 +11,14 @@ const LandingPage = () => {
 
   useEffect(() => {
     ApiService.getLatestNews().then(({ data }) => {
-      setState({ data, isLoading: false});
+      setState({ data, isLoading: false });
       document.title = 'UK News App' // To update the page title
     });
   }, []);
 
-  //Some Object destructing
+  //Object destructing
   const { data: { articles = [] } } = state;
-  //Loader component until the response returns back from api
+  //Loader
   if (state.isLoading) {
     return (
       <Load loading />

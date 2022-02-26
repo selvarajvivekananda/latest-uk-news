@@ -12,15 +12,15 @@ const Search = () => {
   const [state, setState] = useState({ keyword: '', data: {}, isLoading: false });
   useEffect(() => {
     state.keyword && ApiService.getSearchedNews(state.keyword).then(({ data }) => {
-      setState({ data, isLoading: false, keyword: state.keyword});
+      setState({ data, isLoading: false, keyword: state.keyword });
     });
-  }, [state.keyword]); //updating the dom on when ever change to the keyword 
+  }, [state.keyword]); //To update the dom when keyword is changed 
 
   const onClick = (keyword) => {
     if (keyword.trim() !== '') setState({ keyword, isLoading: true });
   };
 
-  //have loader in place until the data is returned from api
+  //loader
   if (state.isLoading) {
     return (
       <Load loading />
@@ -29,17 +29,17 @@ const Search = () => {
   const { data: { articles = [] }, keyword = '' } = state;
   return (
     <div>
-        <Header></Header>
-      <div style={{paddingTop:"40px"}}>
-      <SearchField
-        classNames="search"
-        placeholder="Search..."
-        onSearchClick={onClick}
-        onEnter={onClick}
-      />
+      <Header></Header>
+      <div style={{ paddingTop: "40px" }}>
+        <SearchField
+          classNames="search"
+          placeholder="Search..."
+          onSearchClick={onClick}
+          onEnter={onClick}
+        />
       </div>
-      {/* View component is reuseable  */}
-      {articles &&  <Body newsArticles={articles} keyword={keyword} />} 
+      {/* Reuseable Component */}
+      {articles && <Body newsArticles={articles} keyword={keyword} />}
     </div>
   );
 };

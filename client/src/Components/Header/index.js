@@ -6,7 +6,7 @@ import { Button } from 'react-bootstrap'
 import './index.css'
 
 const Header = () => (
-    <>  
+    <>
         <span className="span">UK News</span>
         <div style={{ background: "#a00606" }}>
             <Navbar id="nav" expand="sm" bg="dark" variant="dark">

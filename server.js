@@ -7,7 +7,7 @@ const axios = require('axios');
 dotenv.config();
 //const redisClient = Redis.createClient();
 
-const {HOST, API_KEY, PORT_NUM = 5000} = process.env;
+const { HOST, API_KEY, PORT_NUM = 5000 } = process.env;
 
 const app = express();
 app.use(express.json());
@@ -16,9 +16,9 @@ app.use(cors());
 // Api to return the latest US news
 app.get('/latest-news', (req, res) => {
     axios.get(`${HOST}/top-headlines?country=us&apiKey=${API_KEY}`)
-    .then((result) => {
-        res.send(result.data)
-    })
+        .then((result) => {
+            res.send(result.data)
+        })
 });
 
 // Api to return the latest US news with redis
@@ -34,9 +34,9 @@ app.get('/latest-news', (req, res) => {
 app.get("/search-news", (req, res) => {
     const { keyword } = req.query
     axios.get(`${HOST}/everything?q=${keyword}&sortBy=publishedAt&apiKey=${API_KEY}`)
-    .then((response) => {
-        res.send(response.data)
-    })
+        .then((response) => {
+            res.send(response.data)
+        })
 })
 
 // function getOrSetCache ( key, callback) {
