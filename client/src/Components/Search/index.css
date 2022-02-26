@@ -1,0 +1,14 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+body{
+  font-family: 'Open Sans', sans-serif;
+}
+
+.search {
+  width: 60%;
+  border: 4px solid #8080849e !important;
+  border-radius: 25px;
+  color: #282b29;
+  height: 70px !important;
+  padding: 18px
+}

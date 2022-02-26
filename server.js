@@ -7,7 +7,7 @@ const axios = require('axios');
 dotenv.config();
 //const redisClient = Redis.createClient();
 
-const {HOST, API_KEY, PORT_NUM } = process.env;
+const {HOST, API_KEY, PORT_NUM = 5000} = process.env;
 
 const app = express();
 app.use(express.json());
