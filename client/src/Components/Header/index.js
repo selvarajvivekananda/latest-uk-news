@@ -7,7 +7,8 @@ import './index.css'
 
 const Header = () => (
     <>
-        <span className="span">UK News</span>
+        <span className="span" data-testid="span">UK News</span>
+        {/* Some inline styling */}
         <div style={{ background: "#a00606" }}>
             <Navbar id="nav" expand="sm" bg="dark" variant="dark">
                 <Nav>

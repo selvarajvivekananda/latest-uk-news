@@ -6,7 +6,6 @@ import ApiService from '../../services';
 import Body from '../Body';
 import Load from '../Load';
 
-// Search bar, making an api call based on keyword entered.
 const Search = () => {
   //Using react hooks here to persist the state and make the api call  
   const [state, setState] = useState({ keyword: '', data: {}, isLoading: false });
@@ -14,18 +13,19 @@ const Search = () => {
     state.keyword && ApiService.getSearchedNews(state.keyword).then(({ data }) => {
       setState({ data, isLoading: false, keyword: state.keyword });
     });
-  }, [state.keyword]); //To update the dom when keyword is changed 
+  }, [state.keyword]); //To update the data with new News when keyword gets changed/ Search happens
 
   const onClick = (keyword) => {
     if (keyword.trim() !== '') setState({ keyword, isLoading: true });
   };
 
-  //loader
+  //Enable Load component when true
   if (state.isLoading) {
     return (
       <Load loading />
     );
   }
+  //object Destructuring
   const { data: { articles = [] }, keyword = '' } = state;
   return (
     <div>

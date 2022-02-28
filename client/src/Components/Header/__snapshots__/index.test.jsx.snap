@@ -1,0 +1,55 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header Header Snapshot test 1`] = `
+Array [
+  <span
+    className="span"
+    data-testid="span"
+  >
+    UK News
+  </span>,
+  <div
+    style={
+      Object {
+        "background": "#a00606",
+      }
+    }
+  >
+    <nav
+      className="navbar navbar-expand-sm navbar-dark bg-dark"
+      id="nav"
+    >
+      <div
+        className="navbar-nav"
+        onKeyDown={[Function]}
+      >
+        <a
+          href="/LandingPage"
+          onClick={[Function]}
+        >
+          <button
+            className="btn btn-outlined"
+            disabled={false}
+            type="button"
+          >
+            Latest News
+          </button>
+        </a>
+        <br />
+        <a
+          href="/Search"
+          onClick={[Function]}
+        >
+          <button
+            className="btn btn-outline-light"
+            disabled={false}
+            type="button"
+          >
+            Search
+          </button>
+        </a>
+      </div>
+    </nav>
+  </div>,
+]
+`;
